@@ -1,7 +1,235 @@
+/*
+=============== 
+Global
+===============
+*/
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-
+}
+body {
   font-family: "Roboto", sans-serif;
+  background-color: var(--primary-light);
+  letter-spacing: var(--letter-spacing);
+}
+
+:root {
+  --primary: #007bff;
+  --primary-dark: #0050d2;
+  --primary-light: #6ca6ff;
+  --primary-light-transition: rgba(108, 166, 255, 0.6);
+  --grey-light: #f1f5f9;
+  --grey: #64748b;
+  --hero-overlay: rgba(0, 0, 0, 0.7);
+  --fluid-width: 90vw;
+  --max-width: 1170px;
+  --black: #222;
+  --white: #fff;
+  --letter-spacing: 2px;
+  --border-radius: 0.15rem;
+  --shadow-light: 0 5px 15px rgba(0, 0, 0, 0.1);
+  --shadow-dark: 05px 15px rgba(0, 0, 0, 0.2);
+  --transition: 0.3s ease-in-out all;
+  --transition-about-us: 1s all;
+  --border-radius: 10px;
+}
+h1 {
+  font-size: 4rem;
+  text-transform: uppercase;
+}
+h2 {
+  font-size: 3rem;
+  text-transform: uppercase;
+}
+h3 {
+  font-size: 2rem;
+  text-transform: capitalize;
+}
+h4 {
+  font-size: 1.25rem;
+  text-transform: capitalize;
+}
+a {
+  text-transform: capitalize;
+  text-decoration: none;
+  color: var(--grey);
+}
+ul {
+  list-style-type: none;
+}
+/*
+=============== 
+Nav
+===============
+*/
+.nav-container {
+  display: flex;
+  position: sticky;
+  height: 7vh;
+  background-color: var(--grey-light);
+  top: 0;
+  z-index: 1;
+  justify-content: center;
+  align-items: center;
+}
+.nav-title {
+  font-weight: 600;
+  font-size: 1.75rem;
+  letter-spacing: 4px;
+  flex-shrink: 0;
+  margin-right: auto;
+  margin-left: 2rem;
+}
+.nav-title-two {
+  color: var(--primary);
+}
+.nav-container i {
+  color: var(--primary);
+  align-items: center;
+}
+.nav-container a {
+  flex-shrink: 0;
+  align-items: center;
+}
+a[class*="internal"] {
+  margin: 0 0.5rem 0 0.5rem;
+}
+a[class*="internal"]:hover {
+  color: var(--primary);
+}
+.fa-brands {
+  font-size: 1.2rem;
+}
+.fa-brands:hover {
+  color: var(--primary-light);
+  transition: var(--transition);
+}
+
+a[class*="external"] {
+  margin-right: 0.5rem;
+}
+a[class*="external"]:hover {
+  color: var(--primary-light);
+}
+.nav-drop-down-menu-btn {
+  font-size: 1.75rem;
+  visibility: hidden;
+  margin-right: 1rem;
+}
+.nav-drop-down-menu-btn:hover {
+  transform: scale(1.2);
+  transition: var(--transition);
+}
+.nav-external-facebook {
+  margin-left: auto;
+}
+a[class*="instagram"] {
+  margin-right: 1rem;
+}
+.nav-drop-down-menu-container {
+  letter-spacing: 4px;
+  display: flex;
+  height: 30vh;
+  position: fixed;
+  width: 100vw;
+  top: 7vh;
+  left: 0;
+  z-index: 2;
+  background-color: var(--grey-light);
+  overflow-y: auto;
+  flex-direction: column;
+  justify-content: flex-end;
+  visibility: hidden;
+}
+.nav-drop-down-menu-container a {
+  display: flex;
+  margin-left: 2rem;
+}
+.nav-drop-down-menu-container a:hover {
+  color: var(--grey);
+}
+li {
+  display: flex;
+  height: 6vh;
+  /* margin-left: 1.5rem; */
+}
+li:hover {
+  background-color: var(--primary-light-transition);
+}
+
+@media screen and (max-width: 900px) {
+  .nav-container
+    a:not(.nav-drop-down-menu-btn, .nav-drop-down-menu-container a) {
+    visibility: hidden;
+  }
+
+  .nav-drop-down-menu-btn {
+    visibility: visible;
+  }
+}
+@media screen and (min-width: 900px) {
+  .nav-drop-down-menu-container {
+    visibility: hidden;
+  }
+}
+/*
+=============== 
+Hero
+===============
+*/
+.hero-container {
+  height: 100vh;
+}
+.hero-btn {
+  visibility: hidden;
+}
+/*
+=============== 
+About us
+===============
+*/
+.about-us-container {
+  visibility: hidden;
+}
+/*
+=============== 
+Services
+===============
+*/
+.services-container {
+  visibility: hidden;
+}
+/*
+=============== 
+Featured Creations
+===============
+*/
+.creations-container {
+  visibility: hidden;
+}
+/*
+=============== 
+Newsletter
+===============
+*/
+.newsletter-container {
+  visibility: hidden;
+}
+/*
+=============== 
+Gallery
+===============
+*/
+.gallery-container {
+  visibility: hidden;
+}
+/*
+=============== 
+Footer
+===============
+*/
+.footer-container {
+  height: 20vh;
+  background-color: var(--grey-light);
 }
