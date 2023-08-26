@@ -10,7 +10,7 @@ Global
 }
 body {
   font-family: "Roboto", sans-serif;
-  background-color: var(--primary-light);
+  /* background-color: var(--grey-light); */
   letter-spacing: var(--letter-spacing);
 }
 
@@ -20,7 +20,7 @@ body {
   --primary-light: #007bff;
   --primary-light-transition: rgba(108, 166, 255, 0.6);
   --grey-light: #f1f5f9;
-  --grey: #64748b;
+  --grey: #566274;
   --hero-overlay: rgba(0, 0, 0, 0.7);
   --fluid-width: 90vw;
   --max-width: 1170px;
@@ -39,11 +39,11 @@ h1 {
   text-transform: uppercase;
 }
 h2 {
-  font-size: 3rem;
+  font-size: 2.75rem;
   text-transform: uppercase;
 }
 h3 {
-  font-size: 2rem;
+  font-size: 1.75rem;
   text-transform: capitalize;
 }
 h4 {
@@ -64,14 +64,15 @@ Nav
 ===============
 */
 .nav-container {
+    background-color: var(--white);
   display: flex;
   position: sticky;
   height: 7vh;
-  background-color: var(--grey-light);
   top: 0;
   z-index: 1;
   justify-content: center;
   align-items: center;
+  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.5);
 }
 .nav-container-center {
   display: flex;
@@ -120,7 +121,7 @@ a[class*="external"]:hover {
   color: var(--primary-light);
 }
 .nav-drop-down-menu-btn {
-  background-color: var(--grey-light);
+  background-color: var(--white);
   font-size: 1.75rem;
   margin-right: 2rem;
   border: none;
@@ -196,7 +197,7 @@ Hero
   display: flex;
   height: 100vh;
   background: linear-gradient(rgba(0, 123, 255, 0.5), rgba(0, 0, 0, 0.8)),
-    url("./images/hero-img\ \(2\).jpg") center/cover no-repeat fixed;
+    url("./images/hero-img\ \(2\).jpg") center/cover no-repeat;
   justify-content: center;
   align-items: center;
   flex-direction: column;
@@ -235,7 +236,65 @@ About us
 ===============
 */
 .about-us-container {
-  visibility: hidden;
+  background-color: var(--white)
+  width: 100vw;
+  margin: 50px 0;
+}
+.about-us-container-center {
+  width: 90vw;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  max-width: 1250px;
+}
+.about-us-title {
+  flex: 1 0 100%;
+  margin-bottom: 50px;
+  text-align: center;
+}
+.about-us-title-two {
+  margin-left: 10px;
+  color: var(--primary);
+}
+.about-us-image {
+  flex: 1 0 100%;
+  height: 400px;
+  width: 100%;
+  background: url("./images/about-us-image.jpg") center/contain no-repeat;
+}
+.about-us-text {
+  flex: 1 0 100%;
+}
+.about-us-text-title {
+  padding-top: 2rem;
+  margin-bottom: 1.25rem;
+}
+.about-us-text-p {
+  letter-spacing: 1px;
+  margin-bottom: 2rem;
+  color: var(--grey);
+}
+.about-us-text-btn {
+  color: var(--grey-light);
+  background-color: var(--primary);
+  padding: 0.75rem 1rem;
+  border: none;
+}
+.about-us-text-btn:hover {
+  background-color: var(--primary-light);
+  transition: var(--transition);
+}
+@media screen and (min-width: 900px) {
+  .about-us-image {
+    display: block;
+    flex: 1 0 50%;
+    /* border: 1px solid black; */
+  }
+  .about-us-text {
+    flex: 1 0 50%;
+    padding: 2rem;
+  }
 }
 /*
 =============== 
@@ -243,7 +302,8 @@ Services
 ===============
 */
 .services-container {
-  visibility: hidden;
+    height: 50vh;
+    background-color: var(--grey-light);
 }
 /*
 =============== 
