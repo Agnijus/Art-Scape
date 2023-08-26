@@ -16,52 +16,73 @@
       crossorigin="anonymous"
     ></script>
     <link rel="stylesheet" href="style.css" />
+    <script>
+      function menuOpen() {
+        drop_down_menu = document.getElementById("drop-down-menu");
+
+        if (drop_down_menu.style.display === "block") {
+          drop_down_menu.style.display = "none";
+        } else {
+          drop_down_menu.style.display = "block";
+          drop_down_menu.style.transform = "translateY(0%)";
+        }
+      }
+    </script>
   </head>
   <body>
     <!-- nav -->
     <nav class="nav-container">
-      <div class="nav-title">
-        <span class="nav-title-one">Art</span
-        ><span class="nav-title-two">Scape</span>
-      </div>
-      <a href="" class="nav-internal-home">home</a>
-      <a href="" class="nav-internal-about">about</a>
-      <a href="" class="nav-internal-services">services</a>
-      <a href="" class="nav-internal-featured">featured</a>
-      <a href="" class="nav-internal-gallery">gallery</a>
-      <a href="" class="nav-external-facebook"
-        ><i class="fa-brands fa-facebook"></i
-      ></a>
-      <a href="" class="external-x"><i class="fa-brands fa-x-twitter"></i></a>
-      <a href="" class="external-instagram"
-        ><i class="fa-brands fa-instagram"></i
-      ></a>
-      <a href="" class="nav-drop-down-menu-btn"
-        ><i class="fa-solid fa-bars"></i
-      ></a>
-      <div class="nav-drop-down-menu-container">
-        <ul>
-          <li>
-            <a href="" class="nav-internal-home">home</a>
-          </li>
-          <li>
-            <a href="" class="nav-internal-about">about</a>
-          </li>
-          <li>
-            <a href="" class="nav-internal-services">services</a>
-          </li>
-          <li>
-            <a href="" class="nav-internal-featured">featured</a>
-          </li>
-          <li><a href="" class="nav-internal-gallery">gallery</a></li>
-        </ul>
+      <div class="nav-container-center">
+
+          <div class="nav-title">
+            <span class="nav-title-one">Art</span
+            ><span class="nav-title-two">Scape</span>
+          </div>
+          <a href="" class="nav-internal-home">home</a>
+          <a href="" class="nav-internal-about">about</a>
+          <a href="" class="nav-internal-services">services</a>
+          <a href="" class="nav-internal-featured">featured</a>
+          <a href="" class="nav-internal-gallery">gallery</a>
+          <a href="" class="nav-external-facebook"
+            ><i class="fa-brands fa-facebook"></i
+          ></a>
+          <a href="" class="external-x"><i class="fa-brands fa-x-twitter"></i></a>
+          <a href="" class="external-instagram"
+            ><i class="fa-brands fa-instagram"></i
+          ></a>
+          <button onclick="menuOpen()" class="nav-drop-down-menu-btn">
+            <i class="fa-solid fa-bars"></i>
+          </button>
+          </div>
+      <div id="drop-down-menu" class="nav-drop-down-menu-container">
+          <ul>
+            <li>
+              <a href="" class="nav-internal-home">home</a>
+            </li>
+            <li>
+              <a href="" class="nav-internal-about">about</a>
+            </li>
+            <li>
+              <a href="" class="nav-internal-services">services</a>
+            </li>
+            <li>
+              <a href="" class="nav-internal-featured">featured</a>
+            </li>
+            <li><a href="" class="nav-internal-gallery">gallery</a></li>
+          </ul>
+          </div>
       </div>
     </nav>
     <!-- hero -->
     <section class="hero-container">
-      <h1 class="hero-title"></h1>
-      <p class="hero-p"></p>
-      <button class="hero-btn"></button>
+      <div class="hero-container-center">
+        <h1 class="hero-title">dive into artistry</h1>
+        <p class="hero-p">
+          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Inventore
+          quia qui expedita tempora odio perspiciatis.
+        </p>
+        <button class="hero-btn">explore arts</button>
+      </div>
     </section>
     <!-- about us -->
     <section class="about-us-container">
