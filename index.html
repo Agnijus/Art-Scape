@@ -19,8 +19,8 @@
     <script>
       function menuOpen() {
         drop_down_menu = document.getElementById("drop-down-menu");
-
-        if (drop_down_menu.style.display === "block") {
+        nav_container = document.getElementById("nav-cont")
+        if (drop_down_menu.style.display == "block") {
           drop_down_menu.style.display = "none";
         } else {
           drop_down_menu.style.display = "block";
@@ -31,9 +31,8 @@
   </head>
   <body>
     <!-- nav -->
-    <nav class="nav-container">
+    <nav id="nav-cont" class="nav-container">
       <div class="nav-container-center">
-
           <div class="nav-title">
             <span class="nav-title-one">Art</span
             ><span class="nav-title-two">Scape</span>
@@ -98,33 +97,56 @@
     </section>
     <!-- services -->
     <section class="services-container">
-      <div class="services-title"></div>
-      <div class="service service-one"></div>
-      <div class="service service-two"></div>
-      <div class="service service-three"></div>
+        <div class="services-container-center">
+            <h2 class="services-title"><span>our</span> <span class="services-title-two">
+                services
+            </span></h2>
+            <div class="service service-one"><div class="service-square"><i class="fas fa-tools"></i>
+</div><h4 class="service-title">guided workshops</h4>
+            <p class="service-p">Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe, sunt?</p></div>
+            <div class="service service-two"><div class="service-square"><i class="fas fa-graduation-cap"></i>
+</div><h4 class="service-title">inspiring courses</h4>
+            <p class="service-p">Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe, sunt?</p></div>
+            <div class="service service-three"><div class="service-square"><i class="fas fa-gem"></i>
+</div><h4 class="service-title">premium supplies</h4>
+            <p class="service-p">Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe, sunt?</p></div>
+            
+        </div>
     </section>
     <!-- featured creations-->
     <section class="creations-container">
-      <div class="creation creation-one"></div>
-      <div class="creation creation-two"></div>
-      <div class="creation creation-three"></div>
-      <div class="creation creation-four"></div>
-      <button class="creations-btn"></button>
+        <div class="creations-container-center">
+            <h2 class="creations-title"><span>Art</span
+                ><span class="creations-title-two">Scape</span></h2>
+          <div class="creation-card creation-one"><div class="creation-card-image"></div><div class="creation-card-text"><h4 class="creation-card-title">elegence in stone</h4><p class="creation-card-p">Lorem ipsum dolor sit amet consectetur adipisicing elit. Id provident corporis aliquid eligendi quibusdam. Distinctio earum sapiente autem. Aut, numquam?
+          </p></div></div>
+           <div class="creation-card creation-two"><div class="creation-card-image"></div><div class="creation-card-text"><h4 class="creation-card-title">digital symphony</h4><p class="creation-card-p">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aut odit molestias cumque similique voluptate labore consequuntur, natus sapiente dolor sit?</p></div></div>
+            <div class="creation-card creation-three"><div class="creation-card-image"></div><div class="creation-card-text"><h4 class="creation-card-title">urban elegance</h4><p class="creation-card-p">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius quam optio quod iusto illum amet inventore voluptas magni adipisci magnam?</p></div></div>
+             <div class="creation-card creation-four"><div class="creation-card-image"></div><div class="creation-card-text"><h4 class="creation-card-title">fantasy realsm</h4><p class="creation-card-p">Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur, soluta accusamus veniam eos fugit neque. Harum amet iste saepe error.</p></div></div>
+             <div class="creations-btn-container">
+                 <button class="creations-btn">all creations</button>
+             </div>
+        </div>
     </section>
     <!-- newsletter -->
     <section class="newsletter-container">
-      <div class="newsletter-title"></div>
-      <div class="newsletter-underline"></div>
-      <form action="">
-        <textarea
-          class="newsletter-textarea"
-          name=""
-          id=""
-          cols="30"
-          rows="10"
-        ></textarea>
-        <button class="newsletter-btn"></button>
-      </form>
+        <div class="newsletter-container-center">
+            <div class="newsletter-container-text">
+                <h3 class="newsletter-title">want latest update about our art?</h3>
+                <div class="newsletter-underline">sign up for newsletter and stay up to date</div>
+            </div>
+            <form action="">
+              <textarea
+                class="newsletter-textarea"
+                name=""
+                id=""
+                cols="30"
+                rows="10"
+                placeholder="Your Email"
+              ></textarea>
+              <button class="newsletter-btn">submit</button>
+            </form>
+        </div>
     </section>
     <!-- gallery -->
     <section class="gallery-container">
