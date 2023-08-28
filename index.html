@@ -16,18 +16,7 @@
       crossorigin="anonymous"
     ></script>
     <link rel="stylesheet" href="style.css" />
-    <script>
-      function menuOpen() {
-        drop_down_menu = document.getElementById("drop-down-menu");
-        nav_container = document.getElementById("nav-cont")
-        if (drop_down_menu.style.display == "block") {
-          drop_down_menu.style.display = "none";
-        } else {
-          drop_down_menu.style.display = "block";
-          drop_down_menu.style.transform = "translateY(0%)";
-        }
-      }
-    </script>
+    
   </head>
   <body id="home">
     <!-- nav -->
@@ -37,11 +26,11 @@
             <span class="nav-title-one">Art</span
             ><span class="nav-title-two">Scape</span>
           </div>
-          <a href="#home" class="nav-internal-home">home</a>
-          <a href="#about" class="nav-internal-about">about</a>
-          <a href="#services" class="nav-internal-services">services</a>
-          <a href="#featured" class="nav-internal-featured">featured</a>
-          <a href="#gallery" class="nav-internal-gallery">gallery</a>
+          <a href="#home" class="nav-internal-home scroll-link">home</a>
+          <a href="#about" class="scroll-link nav-internal-about">about</a>
+          <a href="#services" class="nav-internal-services scroll-link">services</a>
+          <a href="#featured" class="nav-internal-featured scroll-link">featured</a>
+          <a href="#gallery" class="nav-internal-gallery scroll-link">gallery</a>
           <a href="https://www.facebook.com" target="_blank" class="nav-external-facebook"
             ><i class="fa-brands fa-facebook"></i
           ></a>
@@ -56,18 +45,18 @@
       <div id="drop-down-menu" class="nav-drop-down-menu-container">
           <ul>
             <li>
-              <a href="#home" class="nav-internal-home">home</a>
+              <a onclick="menuOpen()" href="#home" class="nav-internal-home scroll-link">home</a>
             </li>
             <li>
-              <a href="#about" class="nav-internal-about">about</a>
+              <a onclick="menuOpen()" href="#about" class="nav-internal-about scroll-link">about</a>
             </li>
             <li>
-              <a href="#services" class="nav-internal-services">services</a>
+              <a onclick="menuOpen()" href="#services" class="nav-internal-services scroll-link">services</a>
             </li>
             <li>
-              <a href="#featured" class="nav-internal-featured">featured</a>
+              <a onclick="menuOpen()" href="#featured" class="nav-internal-featured scroll-link">featured</a>
             </li>
-            <li><a href="#gallery" class="nav-internal-gallery">gallery</a></li>
+            <li><a onclick="menuOpen()" href="#gallery" class="nav-internal-gallery scroll-link">gallery</a></li>
           </ul>
           </div>
       </div>
@@ -163,11 +152,11 @@
     <footer class="footer-container">
         <div class="footer-container-center">
             <div class="footer-internal-links">
-                <a href="" class="footer-link-home">home</a>
-                <a href="" class="footer-link-about">about</a>
-                <a href="" class="footer-link-services">services</a>
-                <a href="" class="footer-link-featured">featured</a>
-                <a href="" class="footer-link-gallery">gallery</a>
+                <a href="#home" class="scroll-link footer-link-home">home</a>
+                <a href="#about" class="scroll-link footer-link-about">about</a>
+                <a href="#services" class="scroll-link footer-link-services">services</a>
+                <a href="#featured" class="scroll-link footer-link-featured">featured</a>
+                <a href="#gallery" class="scroll-link footer-link-gallery">gallery</a>
             </div>
             <div class="footer-external-links">
               <a href="https://www.facebook.com" target="_blank"><i class="fa-brands fa-facebook"></i></a>
@@ -178,5 +167,34 @@
             <div class="footer-copyright-text">Copyright &copy; 2023 <span>Art Scape Company</span>. All rights reserved</div>
         </div>
     </footer>
+    <script>
+      function menuOpen() {
+        drop_down_menu = document.getElementById("drop-down-menu");
+        if (drop_down_menu.style.display == "block") {
+          drop_down_menu.style.display = "none";
+        } else {
+          drop_down_menu.style.display = "block";
+          // drop_down_menu.style.transform = "translateY(0%)";
+        }
+      }
+      const scrollLinks = document.querySelectorAll(".scroll-link");
+        scrollLinks.forEach(link => {
+          link.addEventListener("click", e => {
+          e.preventDefault();
+          const id = e.target.getAttribute("href").slice(1);
+          const element = document.getElementById(id);
+      
+          if(element) {
+          const top = element.getBoundingClientRect().top;
+          window.scrollTo({
+            top: top + window.pageYOffset + -65,
+            behavior: 'smooth'
+          });
+          }
+      });
+  });
+
+
+    </script>
   </body>
 </html>

@@ -58,6 +58,7 @@ a {
 ul {
   list-style-type: none;
 }
+
 /*
 =============== 
 Nav
@@ -151,7 +152,6 @@ a[class*="instagram"] {
   flex-direction: column;
   justify-content: flex-end;
   display: none;
-  /* transition: var(--transition); */
   box-shadow: var(--shadow-light);
 }
 
@@ -239,7 +239,8 @@ About us
 .about-us-container {
   background-color: var(--white);
   width: 100vw;
-  margin: 50px 0;
+  padding-top: 50px;
+  padding-bottom: 50px;
 }
 .about-us-container-center {
   width: 90vw;
@@ -306,8 +307,6 @@ Services
 .services-container {
   background-color: var(--grey-light);
   width: 100vw;
-  margin: 50px 0;
-  padding-bottom: 50px;
 }
 .services-container-center {
   padding-top: 50px;
