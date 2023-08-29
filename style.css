@@ -153,11 +153,13 @@ a[class*="instagram"] {
   justify-content: flex-end;
   display: none;
   box-shadow: var(--shadow-light);
+  overflow: hidden;
 }
 
 .nav-drop-down-menu-container a {
   display: flex;
-  margin-left: 2rem;
+  padding-left: 1.25rem;
+  width: 100%;
 }
 .nav-drop-down-menu-container a:hover {
   color: var(--grey);
@@ -406,6 +408,7 @@ Featured Creations
 }
 .creation-card:hover {
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+  transform: scale(102%);
   transition: var(--transition);
 }
 .creation-card-image {
@@ -424,6 +427,7 @@ Featured Creations
   background: url("./images/magical.jpg") center/cover;
 }
 .creation-card-text {
+  flex-direction: column;
   height: 50%;
   padding: 1.5rem;
   letter-spacing: 1px;
@@ -435,6 +439,23 @@ Featured Creations
 .creation-card-p {
   font-size: 0.9rem;
   color: var(--grey);
+  margin-bottom: 3rem;
+}
+.creation-info {
+  height: 20%;
+  display: flex;
+  font-weight: 400;
+  color: var(--primary-dark);
+}
+.creation-type {
+  width: 50%;
+  align-self: flex-end;
+}
+.creation-price {
+  /* border: 1px solid blue; */
+  align-self: flex-end;
+  width: 50%;
+  text-align: end;
 }
 .creations-btn-container {
   flex: 0 0 100%;
